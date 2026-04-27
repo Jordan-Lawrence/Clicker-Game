@@ -1,4 +1,4 @@
-class Counter{
+export class Counter{
     constructor(scoreTxt, highScoreTxt = null) {
         this.scoreTxt = scoreTxt;
         this.highScoreTxt = highScoreTxt
@@ -9,7 +9,7 @@ class Counter{
     increment(value = 1) {
         this.count += value;
         if (this.count > this.highScore) {
-            this.highScore == this.count;
+            this.highScore = this.count;
         }
         this.update();
         
@@ -21,7 +21,7 @@ class Counter{
     }
 
     update() {
-        this.scoreTxt.textContent = string(this.count);
-        this.highScoreTxt.textContent = string(this.highScore)
+        this.scoreTxt.textContent = String(this.count);
+        this.highScoreTxt.textContent = String(this.highScore)
     }
 }
